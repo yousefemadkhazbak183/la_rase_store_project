@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
 class CreateAccountPage extends StatefulWidget {
   @override
@@ -124,7 +125,9 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 Text("Already have an account? "),
                 GestureDetector(
                   onTap: () {
-                  
+                     Navigator.push(context,  MaterialPageRoute(
+                      builder: (context) => SignInPage(),
+                    ));
                   },
                   child: Text(
                     "Sign In",
