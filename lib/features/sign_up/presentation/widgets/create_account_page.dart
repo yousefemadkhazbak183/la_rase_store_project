@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/Home_screen/HomeScreen.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
 class CreateAccountPage extends StatefulWidget {
   static const String routeName = 'sign up';
@@ -87,7 +89,8 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF936e5f),
                 shape: RoundedRectangleBorder(
@@ -124,6 +127,7 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 Text("Already have an account? "),
                 GestureDetector(
                   onTap: () {
+                    Navigator.pushReplacementNamed(context, SignInPage.routeName);
                   
                   },
                   child: Text(
