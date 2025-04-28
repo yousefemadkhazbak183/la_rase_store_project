@@ -3,6 +3,8 @@ import 'package:la_rase_store_project/features/sign_up/presentation/widgets/Spla
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
+import 'Home_screen/HomeScreen.dart';
+
 
 void main() {
   runApp(MyApp());
@@ -20,9 +22,11 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: splashScreen.routeName,
       routes: {
+        HomeScreen.routNam :(context)=> HomeScreen(),
         splashScreen.routeName :(context)=> splashScreen(),
         CreateAccountPage.routeName: (context) => CreateAccountPage(),
         SignInPage.routeName: (context) => SignInPage(),
+
       },
     );
   }

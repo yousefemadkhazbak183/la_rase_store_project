@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/Home_screen/HomeScreen.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
 
 class SignInPage extends StatefulWidget {
   static const String routeName = 'sign in';
@@ -22,7 +24,7 @@ class _SignInPageState extends State<SignInPage> {
             ),
             SizedBox(height: 10),
             Text(
-              "Hi! Welcome back, you’ve been missed",
+              "Hi! Welcome back,To larase, you’ve been missed",
               style: TextStyle(fontSize: 16, color: Colors.grey),
               textAlign: TextAlign.center,
             ),
@@ -65,7 +67,9 @@ class _SignInPageState extends State<SignInPage> {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushReplacementNamed(context, HomeScreen.routNam);
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color(0xFF936e5f),
                 shape: RoundedRectangleBorder(
@@ -87,14 +91,7 @@ class _SignInPageState extends State<SignInPage> {
               ],
             ),
             SizedBox(height: 20),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                _buildSocialIcon('assets/apple.png'),
-                _buildSocialIcon('assets/google.png'),
-                _buildSocialIcon('assets/facebook.png'),
-              ],
-            ),
+
             SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -104,11 +101,16 @@ class _SignInPageState extends State<SignInPage> {
                   onTap: () {
                     
                   },
-                  child: Text(
-                    "Sign Up",
-                    style: TextStyle(
-                        decoration: TextDecoration.underline,
-                        color: Colors.brown),
+                  child: GestureDetector(
+                    onTap: (){
+                      Navigator.pushReplacementNamed(context, CreateAccountPage.routeName);
+                    },
+                    child: Text(
+                      "Sign Up",
+                      style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: Colors.brown),
+                    ),
                   ),
                 )
               ],
