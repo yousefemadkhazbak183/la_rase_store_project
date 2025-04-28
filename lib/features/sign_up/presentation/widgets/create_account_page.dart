@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class CreateAccountPage extends StatefulWidget {
+  static const String routeName = 'sign up';
   @override
   _CreateAccountPageState createState() => _CreateAccountPageState();
 }
-
 class _CreateAccountPageState extends State<CreateAccountPage> {
   bool agree = false;
 
