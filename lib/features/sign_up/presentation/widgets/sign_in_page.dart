@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/home_page.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/home_screen.dart';
 
 class SignInPage extends StatefulWidget {
   @override
@@ -72,7 +75,19 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 padding: EdgeInsets.symmetric(vertical: 15),
               ),
-              child: Text("Sign In", style: TextStyle(fontSize: 18)),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(context, MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ));
+                  },
+                  child: Text(
+                    "Sign In",
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.brown),
+                  ),
+                ),
             ),
             SizedBox(height: 30),
             Row(
@@ -89,9 +104,9 @@ class _SignInPageState extends State<SignInPage> {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
-                _buildSocialIcon('assets/apple.png'),
-                _buildSocialIcon('assets/google.png'),
-                _buildSocialIcon('assets/facebook.png'),
+                // _buildSocialIcon('assets/apple.png'),
+                // _buildSocialIcon('assets/google.png'),
+                // _buildSocialIcon('assets/facebook.png'),
               ],
             ),
             SizedBox(height: 30),
@@ -101,7 +116,9 @@ class _SignInPageState extends State<SignInPage> {
                 Text("Don’t have an account? "),
                 GestureDetector(
                   onTap: () {
-                    
+                    Navigator.push(context,  MaterialPageRoute(
+                      builder: (context) => CreateAccountPage(),
+                    ));
                   },
                   child: Text(
                     "Sign Up",
@@ -109,7 +126,7 @@ class _SignInPageState extends State<SignInPage> {
                         decoration: TextDecoration.underline,
                         color: Colors.brown),
                   ),
-                )
+                ),
               ],
             ),
           ],

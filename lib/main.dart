@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/home_screen.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
 
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
       initialRoute: '/signup',
       routes: {
         '/signup': (context) => CreateAccountPage(),
-        '/signin': (context) => SignInPage(),
+        '/signin': (context) =>  SignInPage(),
+        '/homescreen': (context) => HomeScreen(),
       },
     );
   }
