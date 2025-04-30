@@ -18,6 +18,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.brown,
         fontFamily: 'Roboto',
       ),
+      // This is the initial route of the app.
       initialRoute: splashScreen.routeName,
       routes: {
         splashScreen.routeName :(context)=> splashScreen(),
