@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
 class CreateAccountPage extends StatefulWidget {
+  static const String routeName = 'sign up';
   @override
   _CreateAccountPageState createState() => _CreateAccountPageState();
 }
-
 class _CreateAccountPageState extends State<CreateAccountPage> {
   bool agree = false;
 
