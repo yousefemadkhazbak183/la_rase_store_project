@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
-class splashScreen extends StatelessWidget {
-  const splashScreen({super.key});
+class SplashScreen extends StatelessWidget {
+  const SplashScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
