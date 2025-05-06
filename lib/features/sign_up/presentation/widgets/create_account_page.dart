@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/Home_screen/HomeScreen.dart';
+=======
+>>>>>>> e1e9afac56d0ea00c2c6839860bf2fcb0a212252
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
 class CreateAccountPage extends StatefulWidget {
@@ -127,8 +130,14 @@ class _CreateAccountPageState extends State<CreateAccountPage> {
                 Text("Already have an account? "),
                 GestureDetector(
                   onTap: () {
+<<<<<<< HEAD
                     Navigator.pushReplacementNamed(context, SignInPage.routeName);
                   
+=======
+                     Navigator.push(context,  MaterialPageRoute(
+                      builder: (context) => SignInPage(),
+                    ));
+>>>>>>> e1e9afac56d0ea00c2c6839860bf2fcb0a212252
                   },
                   child: Text(
                     "Sign In",

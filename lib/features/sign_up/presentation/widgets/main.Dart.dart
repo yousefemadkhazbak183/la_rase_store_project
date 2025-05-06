@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:la_rase_store_project/features/sign_up/presentation/widgets/Splash_Screen.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/screens/splash_screen.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/screens/home_screen.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/sign_in_page.dart';
 
 import 'Home_screen/HomeScreen.dart';
@@ -20,13 +21,24 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.brown,
         fontFamily: 'Roboto',
       ),
-      initialRoute: splashScreen.routeName,
+      // This is the initial route of the app.
+      
+      initialRoute: '/splash',
       routes: {
+<<<<<<< HEAD:lib/features/sign_up/presentation/widgets/main.Dart.dart
         HomeScreen.routNam :(context)=> HomeScreen(),
         splashScreen.routeName :(context)=> splashScreen(),
         CreateAccountPage.routeName: (context) => CreateAccountPage(),
         SignInPage.routeName: (context) => SignInPage(),
 
+=======
+        
+        
+        '/splash': (context) => SplashScreen(),
+        '/signup': (context) => CreateAccountPage(),
+        '/signin': (context) =>  SignInPage(),
+        '/homescreen': (context) => HomeScreen(),
+>>>>>>> e1e9afac56d0ea00c2c6839860bf2fcb0a212252:lib/main.dart
       },
     );
   }

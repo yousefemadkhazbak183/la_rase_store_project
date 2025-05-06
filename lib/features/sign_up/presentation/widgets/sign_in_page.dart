@@ -1,9 +1,16 @@
 import 'package:flutter/material.dart';
+<<<<<<< HEAD
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/Home_screen/HomeScreen.dart';
 import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
+=======
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/create_account_page.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/widgets/home_page.dart';
+import 'package:la_rase_store_project/features/sign_up/presentation/screens/home_screen.dart';
+>>>>>>> e1e9afac56d0ea00c2c6839860bf2fcb0a212252
 
 class SignInPage extends StatefulWidget {
-  static const String routeName = 'sign in';
+  
+
   @override
   _SignInPageState createState() => _SignInPageState();
 }
@@ -77,7 +84,19 @@ class _SignInPageState extends State<SignInPage> {
                 ),
                 padding: EdgeInsets.symmetric(vertical: 15),
               ),
-              child: Text("Sign In", style: TextStyle(fontSize: 18)),
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pushReplacement(context, MaterialPageRoute(
+                      builder: (context) => HomeScreen(),
+                    ));
+                  },
+                  child: Text(
+                    "Sign In",
+                    style: TextStyle(
+                        decoration: TextDecoration.underline,
+                        color: Colors.brown),
+                  ),
+                ),
             ),
             SizedBox(height: 30),
             Row(
@@ -91,7 +110,18 @@ class _SignInPageState extends State<SignInPage> {
               ],
             ),
             SizedBox(height: 20),
+<<<<<<< HEAD
 
+=======
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                // _buildSocialIcon('assets/apple.png'),
+                // _buildSocialIcon('assets/google.png'),
+                // _buildSocialIcon('assets/facebook.png'),
+              ],
+            ),
+>>>>>>> e1e9afac56d0ea00c2c6839860bf2fcb0a212252
             SizedBox(height: 30),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
@@ -99,7 +129,9 @@ class _SignInPageState extends State<SignInPage> {
                 Text("Don’t have an account? "),
                 GestureDetector(
                   onTap: () {
-                    
+                    Navigator.push(context,  MaterialPageRoute(
+                      builder: (context) => CreateAccountPage(),
+                    ));
                   },
                   child: GestureDetector(
                     onTap: (){
@@ -112,7 +144,7 @@ class _SignInPageState extends State<SignInPage> {
                           color: Colors.brown),
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ],
